@@ -1,0 +1,17 @@
+package semana_02;
+
+public class Obrero {
+	
+	private int codigo;
+	private String nombre;
+	private int horasTrabajadas;
+	private double tarifaHora;
+	
+	//Constructores 
+	public Obrero() {
+		
+	}
+	 
+	
+
+}

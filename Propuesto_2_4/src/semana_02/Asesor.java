@@ -1,0 +1,63 @@
+package semana_02;
+
+public class Asesor {
+
+	private int codigo;
+	private String nombre;
+	private int horasTrabajas;
+	private double tarifasHora;
+	
+	//Constructores
+	public Asesor() {
+		
+	}
+	public Asesor(int codigo, String nombre, int horasTrabajas,
+			int tarifasHora) {
+		
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.horasTrabajas = horasTrabajas;
+		this.tarifasHora = tarifasHora;
+	}
+	
+	//Metodos get/set
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getHorasTrabajas() {
+		return horasTrabajas;
+	}
+	public void setHorasTrabajas(int horasTrabajas) {
+		this.horasTrabajas = horasTrabajas;
+	}
+	public double getTarifasHora() {
+		return tarifasHora;
+	}
+	public void setTarifasHora(double tarifasHora) {
+		this.tarifasHora = tarifasHora;
+	}
+	
+	//Metodos publicos
+	
+	public double sueldoBruto() {
+		return horasTrabajas*tarifasHora;
+		}
+	
+	public double sueldoDescuento() {
+		return sueldoBruto() - sueldoBruto()*0.15;
+	}
+	
+	public double sueldoNeto() {
+		return sueldoBruto() - sueldoDescuento();
+	}
+	
+}
